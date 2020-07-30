@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Camera2api.iml" filepath="$PROJECT_DIR$/.idea/modules/Camera2api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CameraApplication.iml" filepath="$PROJECT_DIR$/.idea/modules/CameraApplication.iml" group="CameraApplication" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="CameraApplication/app" />
     </modules>
   </component>
 </project>

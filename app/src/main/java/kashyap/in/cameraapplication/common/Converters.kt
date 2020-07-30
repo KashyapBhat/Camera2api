@@ -1,8 +1,14 @@
 package kashyap.`in`.cameraapplication.common
 
 import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Environment
 import android.util.Log
+import com.google.android.gms.tasks.OnFailureListener
+import com.google.android.gms.tasks.OnSuccessListener
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.UploadTask
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -11,6 +17,7 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
+
 
 object Converters {
 
@@ -76,6 +83,17 @@ object Converters {
     }
 
     private fun save(bitmap: File, byte: ByteArray): File {
+        val file: Uri = Uri.fromFile(File(bitmap.absolutePath))
+        val storageRef = FirebaseStorage.getInstance().reference
+
+        val riversRef = storageRef.child("images/" + file.lastPathSegment)
+        val uploadTask = riversRef.putFile(file)
+        uploadTask.addOnFailureListener {
+            Log.d("Failed", it.message);
+
+        }.addOnSuccessListener {
+            Log.d("Passes", "");
+        }
         val output = FileOutputStream(bitmap)
         try {
             output.write(byte);

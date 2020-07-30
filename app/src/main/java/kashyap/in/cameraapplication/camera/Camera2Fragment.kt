@@ -454,7 +454,10 @@ open class Camera2Fragment : Fragment(), View.OnClickListener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        mFile = java.io.File(activity?.getExternalFilesDir(null), "pic.jpg")
+        mFile = java.io.File(
+            activity?.getExternalFilesDir(null),
+            "Camera-" + System.currentTimeMillis() + ".jpg"
+        )
     }
 
     override fun onResume() {

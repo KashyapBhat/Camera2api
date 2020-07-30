@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "843574629180",
+    "firebase_url": "https://camera2api-76597.firebaseio.com",
+    "project_id": "camera2api-76597",
+    "storage_bucket": "camera2api-76597.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843574629180:android:d5796f28241ba9e4154439",
+        "android_client_info": {
+          "package_name": "kashyap.in.cameraapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843574629180-u3guss76urr144sj0r2pjmovbehqo1ac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi65DuRWJWViU5wbOyQFmDdB-Nca0cxJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843574629180-u3guss76urr144sj0r2pjmovbehqo1ac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
