@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextureView
+        android:id="@+id/texture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/picture"
+        android:layout_alignParentTop="true" />
+
+    <ImageButton
+        android:id="@+id/picture"
+        style="@android:style/Widget.Material.Light.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:contentDescription="@string/capture"
+        android:src="@drawable/ic_camera" />
+
+    <ImageButton
+        android:id="@+id/rotate"
+        style="@android:style/Widget.Material.Light.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/black"
+        android:contentDescription="@string/rotate"
+        android:src="@drawable/ic_camera_rotation" />
+</RelativeLayout>
