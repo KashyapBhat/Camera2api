@@ -10,7 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/picture"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp" />
 
     <ImageButton
         android:id="@+id/picture"
@@ -25,11 +27,13 @@
     <ImageButton
         android:id="@+id/rotate"
         style="@android:style/Widget.Material.Light.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/_50dp"
+        android:layout_width="@dimen/_35dp"
+        android:layout_height="@dimen/_35dp"
+        android:layout_margin="@dimen/_20dp"
         android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"
         android:layout_alignParentEnd="true"
-        android:background="@color/black"
         android:contentDescription="@string/rotate"
-        android:src="@drawable/ic_camera_rotation" />
+        android:src="@drawable/ic_camera_rotation"
+        android:background="@drawable/ic_camera_rotation"/>
 </RelativeLayout>
