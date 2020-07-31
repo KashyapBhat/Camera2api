@@ -45,7 +45,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import kashyap.in.cameraapplication.common.SharedPrefUtils;
+import kashyap.in.cameraapplication.util.SharedPrefUtils;
 
 import static kashyap.in.cameraapplication.common.ConstantsKt.CAMERA_BACK;
 import static kashyap.in.cameraapplication.common.ConstantsKt.CAMERA_FRONT;
@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onError(@NotNull CameraDevice camera, int error) {
-            cameraDevice.close();
+            if (cameraDevice != null) cameraDevice.close();
             cameraDevice = null;
         }
     };
@@ -218,6 +218,12 @@ public class MainActivity extends AppCompatActivity {
             ImageReader.OnImageAvailableListener readerListener = new ImageReader.OnImageAvailableListener() {
                 @Override
                 public void onImageAvailable(ImageReader reader) {
+
+//                    ImageReader.OnImageAvailableListener readerListener = reader1 -> ImageSavingKt.saveImageFile(reader1, file, (savedFile) -> {
+//                        Log.d("File: ", "Path: " + savedFile.getAbsolutePath());
+//                        return Unit.INSTANCE;
+//                    });
+
                     Image image = null;
                     try {
                         image = reader.acquireLatestImage();

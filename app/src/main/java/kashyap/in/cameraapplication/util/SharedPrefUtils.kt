@@ -1,4 +1,4 @@
-package kashyap.`in`.cameraapplication.common
+package kashyap.`in`.cameraapplication.util
 
 import android.content.Context
 import android.util.Log
