@@ -33,9 +33,9 @@
 
         <receiver android:name=".receiver.FileProgressReceiver">
             <intent-filter>
-                <action android:name="com.wave.ACTION_CLEAR_NOTIFICATION" />
-                <action android:name="com.wave.ACTION_PROGRESS_NOTIFICATION" />
-                <action android:name="com.wave.ACTION_UPLOADED" />
+                <action android:name="kashyap.in.ACTION_CLEAR_NOTIFICATION" />
+                <action android:name="kashyap.in.ACTION_PROGRESS_NOTIFICATION" />
+                <action android:name="kashyap.in.ACTION_UPLOADED" />
             </intent-filter>
         </receiver>
         <provider
@@ -49,8 +49,8 @@
         </provider>
         <receiver android:name=".receiver.RetryJobReceiver">
             <intent-filter>
-                <action android:name="com.wave.ACTION_RETRY" />
-                <action android:name="com.wave.ACTION_CLEAR" />
+                <action android:name="kashyap.in.ACTION_RETRY" />
+                <action android:name="kashyap.in.ACTION_CLEAR" />
             </intent-filter>
         </receiver>
 

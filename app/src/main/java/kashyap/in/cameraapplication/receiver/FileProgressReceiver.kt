@@ -14,9 +14,9 @@ class FileProgressReceiver : BroadcastReceiver() {
 
     companion object {
         private const val TAG = "FileProgressReceiver"
-        const val ACTION_CLEAR_NOTIFICATION = "com.wave.ACTION_CLEAR_NOTIFICATION"
-        const val ACTION_PROGRESS_NOTIFICATION = "com.wave.ACTION_PROGRESS_NOTIFICATION"
-        const val ACTION_UPLOADED = "com.wave.ACTION_UPLOADED"
+        const val ACTION_CLEAR_NOTIFICATION = "kashyap.in.ACTION_CLEAR_NOTIFICATION"
+        const val ACTION_PROGRESS_NOTIFICATION = "kashyap.in.ACTION_PROGRESS_NOTIFICATION"
+        const val ACTION_UPLOADED = "kashyap.in.ACTION_UPLOADED"
         const val NOTIFICATION_ID = 1
     }
 
@@ -35,7 +35,7 @@ class FileProgressReceiver : BroadcastReceiver() {
                 notification = mNotificationHelper?.getNotification(
                     mContext.getString(R.string.uploading),
                     mContext.getString(R.string.in_progress), progress
-                )
+                )?.setSound(null)
                 notification?.let {
                     mNotificationHelper?.notify(
                         NOTIFICATION_ID,

@@ -2,6 +2,6 @@
 <paths>
     <external-path
         name="my_images"
-        path="Android/data/com.wave.fileuploadservice/files/Pictures" />
-    <!-- replace com.wave.fileuploadservice with your package name -->
+        path="Android/data/kashyap.in.fileuploadservice/files/Pictures" />
+    <!-- replace kashyap.in.fileuploadservice with your package name -->
 </paths>

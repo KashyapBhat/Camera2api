@@ -11,8 +11,8 @@ import java.util.*
 class RetryJobReceiver : BroadcastReceiver() {
 
     companion object {
-        const val ACTION_RETRY = "com.wave.ACTION_RETRY"
-        const val ACTION_CLEAR = "com.wave.ACTION_CLEAR"
+        const val ACTION_RETRY = "kashyap.in.ACTION_RETRY"
+        const val ACTION_CLEAR = "kashyap.in.ACTION_CLEAR"
     }
 
     var mNotificationHelper: NotificationHelper? = null

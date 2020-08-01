@@ -90,7 +90,9 @@ open class MainActivity : AppCompatActivity() {
         textureView = findViewById(R.id.texture)
         textureView?.surfaceTextureListener = textureListener
         val takePicture = findViewById<ImageButton>(R.id.picture)
-        takePicture.setOnClickListener { takePicture() }
+        takePicture.setOnClickListener {
+            if (!isCapturing) takePicture()
+        }
         val rotate = findViewById<ImageButton>(R.id.rotate)
         rotate.setOnClickListener { rotateCamera() }
         progressBar = findViewById(R.id.progressBar)
@@ -162,7 +164,10 @@ open class MainActivity : AppCompatActivity() {
     }
 
     private fun takePicture() {
-        if (isCapturing) return
+        if (isCapturing) {
+            Toast.makeText(this, "Processing... Please wait", Toast.LENGTH_LONG).show()
+            return
+        }
         if (cameraDevice == null) {
             textureView?.surfaceTextureListener = textureListener
             return

@@ -15,7 +15,7 @@ import kashyap.`in`.cameraapplication.R
 class NotificationHelper(mContext: Context?) : ContextWrapper(mContext) {
 
     companion object {
-        const val WAVE_CHANNEL = "default"
+        const val NOT_CHANNEL = "default"
     }
 
     private var manager: NotificationManager? = null
@@ -31,9 +31,10 @@ class NotificationHelper(mContext: Context?) : ContextWrapper(mContext) {
         var mChannel: NotificationChannel? = null
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             mChannel = NotificationChannel(
-                WAVE_CHANNEL,
+                NOT_CHANNEL,
                 getString(R.string.noti_channel_default), NotificationManager.IMPORTANCE_DEFAULT
             )
+            mChannel.setSound(null, null);
             mChannel.lightColor = Color.GREEN
             mChannel.lockscreenVisibility = Notification.VISIBILITY_PRIVATE
             manager?.createNotificationChannel(mChannel)
@@ -47,9 +48,10 @@ class NotificationHelper(mContext: Context?) : ContextWrapper(mContext) {
     ): NotificationCompat.Builder {
         val mBuilder: NotificationCompat.Builder = NotificationCompat.Builder(
             applicationContext,
-            WAVE_CHANNEL
+            NOT_CHANNEL
         )
         mBuilder.setSmallIcon(smallIcon)
+        mBuilder.setSound(null)
         mBuilder.color = ContextCompat.getColor(applicationContext, R.color.colorAccent)
         mBuilder.setContentTitle(title)
             .setContentText(body)
@@ -71,8 +73,9 @@ class NotificationHelper(mContext: Context?) : ContextWrapper(mContext) {
     ): NotificationCompat.Builder {
         val mBuilder: NotificationCompat.Builder = NotificationCompat.Builder(
             applicationContext,
-            WAVE_CHANNEL
+            NOT_CHANNEL
         )
+        mBuilder.setSound(null)
         mBuilder.setSmallIcon(smallIcon)
         mBuilder.color = ContextCompat.getColor(applicationContext, R.color.colorAccent)
         mBuilder.setContentTitle(title)
@@ -85,7 +88,7 @@ class NotificationHelper(mContext: Context?) : ContextWrapper(mContext) {
     }
 
     fun notify(id: Int, notification: NotificationCompat.Builder) {
-        manager?.notify(id, notification.build())
+        manager?.notify(id, notification.setSound(null).build())
     }
 
     private val smallIcon: Int

@@ -89,7 +89,7 @@ class FileUploadService : JobIntentService() {
     }
 
     private fun onErrors(throwable: Throwable) {
-        val successIntent = Intent("com.wave.ACTION_CLEAR_NOTIFICATION")
+        val successIntent = Intent("kashyap.in.ACTION_CLEAR_NOTIFICATION")
         successIntent.putExtra("notificationId", NOTIFICATION_ID)
         sendBroadcast(successIntent)
         val resultPendingIntent = PendingIntent.getActivity(
@@ -124,7 +124,7 @@ class FileUploadService : JobIntentService() {
 
     private fun onProgress(progress: Double) {
         val progressIntent = Intent(this, FileProgressReceiver::class.java)
-        progressIntent.action = "com.wave.ACTION_PROGRESS_NOTIFICATION"
+        progressIntent.action = "kashyap.in.ACTION_PROGRESS_NOTIFICATION"
         progressIntent.putExtra("notificationId", NOTIFICATION_ID)
         progressIntent.putExtra("progress", (100 * progress).toInt())
         sendBroadcast(progressIntent)
@@ -132,7 +132,7 @@ class FileUploadService : JobIntentService() {
 
     private fun onSuccess() {
         val successIntent = Intent(this, FileProgressReceiver::class.java)
-        successIntent.action = "com.wave.ACTION_UPLOADED"
+        successIntent.action = "kashyap.in.ACTION_UPLOADED"
         successIntent.putExtra("notificationId", NOTIFICATION_ID)
         successIntent.putExtra("progress", 100)
         sendBroadcast(successIntent)
