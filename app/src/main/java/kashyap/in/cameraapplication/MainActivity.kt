@@ -218,9 +218,16 @@ open class MainActivity : AppCompatActivity() {
                     }
                     val mIntent = Intent(this, FileUploadService::class.java)
                     mIntent.putExtra("mFilePath", file.absolutePath)
-                    if (isNetworkOnline(this))
+                    if (isNetworkOnline(this)) {
+                        runOnUiThread {
+                            Toast.makeText(
+                                this@MainActivity,
+                                "Uploading...",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
                         FileUploadService.enqueueWork(this, mIntent)
-                    else runOnUiThread {
+                    } else runOnUiThread {
                         Toast.makeText(
                             this,
                             "Please connect to Internet.",
@@ -237,7 +244,6 @@ open class MainActivity : AppCompatActivity() {
                     result: TotalCaptureResult
                 ) {
                     super.onCaptureCompleted(session, request, result)
-                    Toast.makeText(this@MainActivity, "Saved:$file", Toast.LENGTH_SHORT).show()
                     createCameraPreview()
                 }
             }
