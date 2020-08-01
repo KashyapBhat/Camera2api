@@ -9,7 +9,6 @@ import android.graphics.SurfaceTexture
 import android.hardware.camera2.*
 import android.hardware.camera2.CameraCaptureSession.CaptureCallback
 import android.hardware.camera2.params.StreamConfigurationMap
-import android.media.Image
 import android.media.ImageReader
 import android.media.ImageReader.OnImageAvailableListener
 import android.os.Bundle
@@ -33,10 +32,9 @@ import kashyap.`in`.cameraapplication.common.CAMERA_BACK
 import kashyap.`in`.cameraapplication.common.CAMERA_FRONT
 import kashyap.`in`.cameraapplication.common.CAMERA_ID
 import kashyap.`in`.cameraapplication.util.SharedPrefUtils
+import kashyap.`in`.cameraapplication.util.getImageFromReader
+import kashyap.`in`.cameraapplication.util.saveImageFile
 import java.io.File
-import java.io.FileOutputStream
-import java.io.IOException
-import java.io.OutputStream
 import java.util.*
 
 open class MainActivity : AppCompatActivity() {
@@ -128,6 +126,7 @@ open class MainActivity : AppCompatActivity() {
 
         override fun onSurfaceTextureUpdated(surface: SurfaceTexture) {}
     }
+
     private val stateCallback: CameraDevice.StateCallback = object : CameraDevice.StateCallback() {
         override fun onOpened(camera: CameraDevice) {
             Log.e(TAG, "onOpened")
@@ -142,17 +141,6 @@ open class MainActivity : AppCompatActivity() {
         override fun onError(camera: CameraDevice, error: Int) {
             cameraDevice?.close()
             cameraDevice = null
-        }
-    }
-    val captureCallbackListener: CaptureCallback = object : CaptureCallback() {
-        override fun onCaptureCompleted(
-            session: CameraCaptureSession,
-            request: CaptureRequest,
-            result: TotalCaptureResult
-        ) {
-            super.onCaptureCompleted(session, request, result)
-            Toast.makeText(this@MainActivity, "Saved:$file", Toast.LENGTH_SHORT).show()
-            createCameraPreview()
         }
     }
 
@@ -214,36 +202,10 @@ open class MainActivity : AppCompatActivity() {
                 Environment.getExternalStorageDirectory()
                     .toString() + "/" + TAG + "/" + System.currentTimeMillis() + ".jpg"
             )
-            val readerListener: OnImageAvailableListener = object : OnImageAvailableListener {
-                override fun onImageAvailable(reader: ImageReader) {
-
-//                    ImageReader.OnImageAvailableListener readerListener = reader1 -> ImageSavingKt.saveImageFile(reader1, file, (savedFile) -> {
-//                        Log.d("File: ", "Path: " + savedFile.getAbsolutePath());
-//                        return Unit.INSTANCE;
-//                    });
-                    var image: Image? = null
-                    try {
-                        image = reader.acquireLatestImage()
-                        val buffer = image.planes[0].buffer
-                        val bytes = ByteArray(buffer.capacity())
-                        buffer[bytes]
-                        save(bytes)
-                    } catch (e: Exception) {
-                        e.printStackTrace()
-                    } finally {
-                        image?.close()
-                    }
-                }
-
-                @Throws(IOException::class)
-                private fun save(bytes: ByteArray) {
-                    var output: OutputStream? = null
-                    try {
-                        output = FileOutputStream(file)
-                        output.write(bytes)
-                    } finally {
-                        output?.close()
-                    }
+            val readerListener = OnImageAvailableListener {
+                saveImageFile(it, file) { file ->
+                    Log.d("Hey", "File:" + file.absolutePath)
+                    runOnUiThread { setCapturing(false) }
                 }
             }
             reader.setOnImageAvailableListener(readerListener, mBackgroundHandler)
@@ -256,14 +218,6 @@ open class MainActivity : AppCompatActivity() {
                     super.onCaptureCompleted(session, request, result)
                     Toast.makeText(this@MainActivity, "Saved:$file", Toast.LENGTH_SHORT).show()
                     createCameraPreview()
-                    val handler = Handler()
-                    handler.postDelayed({
-                        runOnUiThread {
-                            setCapturing(
-                                false
-                            )
-                        }
-                    }, 300)
                 }
             }
             cameraDevice?.createCaptureSession(

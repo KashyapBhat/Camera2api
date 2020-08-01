@@ -2,23 +2,21 @@ package kashyap.`in`.cameraapplication.util
 
 import android.media.Image
 import android.media.ImageReader
-import io.reactivex.Single
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.*
 
 fun saveImageFile(reader: ImageReader, file: File, onBitmapConverted: (File) -> Unit) {
-    Single.fromCallable {
-        getImageFromReader(reader, file)
-    }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
-        .subscribe({
-            if (it != null) {
-                onBitmapConverted(it)
-            }
-        }, { it.localizedMessage }).dispose()
+    GlobalScope.launch {
+        withContext(Dispatchers.IO) {
+            onBitmapConverted(getImageFromReader(reader, file))
+        }
+    }
 }
 
-fun getImageFromReader(reader: ImageReader, file: File): File {
+suspend fun getImageFromReader(reader: ImageReader, file: File): File {
     var image: Image? = null
     try {
         image = reader.acquireLatestImage()
@@ -37,7 +35,7 @@ fun getImageFromReader(reader: ImageReader, file: File): File {
 }
 
 @Throws(IOException::class)
-private fun save(bytes: ByteArray, file: File): File {
+private suspend fun save(bytes: ByteArray, file: File): File {
     var output: OutputStream? = null
     try {
         output = FileOutputStream(file)
