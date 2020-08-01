@@ -31,8 +31,8 @@ import androidx.core.app.ActivityCompat
 import kashyap.`in`.cameraapplication.common.CAMERA_BACK
 import kashyap.`in`.cameraapplication.common.CAMERA_FRONT
 import kashyap.`in`.cameraapplication.common.CAMERA_ID
+import kashyap.`in`.cameraapplication.network.FileUploadService
 import kashyap.`in`.cameraapplication.util.SharedPrefUtils
-import kashyap.`in`.cameraapplication.util.getImageFromReader
 import kashyap.`in`.cameraapplication.util.saveImageFile
 import java.io.File
 import java.util.*
@@ -206,6 +206,13 @@ open class MainActivity : AppCompatActivity() {
                 saveImageFile(it, file) { file ->
                     Log.d("Hey", "File:" + file.absolutePath)
                     runOnUiThread { setCapturing(false) }
+                    if (!file.exists() || file.absolutePath.toString().isEmpty()) {
+                        Toast.makeText(this, "Select file first", Toast.LENGTH_LONG).show()
+                        return@saveImageFile
+                    }
+                    val mIntent = Intent(this, FileUploadService::class.java)
+                    mIntent.putExtra("mFilePath", file.absolutePath)
+                    FileUploadService.enqueueWork(this, mIntent)
                 }
             }
             reader.setOnImageAvailableListener(readerListener, mBackgroundHandler)
