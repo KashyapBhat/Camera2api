@@ -32,7 +32,7 @@ import kashyap.`in`.cameraapplication.common.CAMERA_BACK
 import kashyap.`in`.cameraapplication.common.CAMERA_FRONT
 import kashyap.`in`.cameraapplication.common.CAMERA_ID
 import kashyap.`in`.cameraapplication.network.FileUploadService
-import kashyap.`in`.cameraapplication.util.SharedPrefUtils
+import kashyap.`in`.cameraapplication.singleton.SharedPrefUtils
 import kashyap.`in`.cameraapplication.util.saveImageFile
 import java.io.File
 import java.util.*

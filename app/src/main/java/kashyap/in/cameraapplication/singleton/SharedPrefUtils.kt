@@ -1,8 +1,9 @@
-package kashyap.`in`.cameraapplication.util
+package kashyap.`in`.cameraapplication.singleton
 
 import android.content.Context
 import android.util.Log
 import androidx.preference.PreferenceManager
+import kashyap.`in`.cameraapplication.util.SingletonHolder
 import java.lang.ref.WeakReference
 
 class SharedPrefUtils(private val context: Context) {

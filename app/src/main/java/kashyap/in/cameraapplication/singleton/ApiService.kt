@@ -1,4 +1,4 @@
-package kashyap.`in`.cameraapplication.network
+package kashyap.`in`.cameraapplication.singleton
 
 import io.reactivex.Single
 import okhttp3.MultipartBody

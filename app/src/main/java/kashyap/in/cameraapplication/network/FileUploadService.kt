@@ -17,6 +17,8 @@ import kashyap.`in`.cameraapplication.common.EMAIL_ID
 import kashyap.`in`.cameraapplication.notification.NotificationHelper
 import kashyap.`in`.cameraapplication.receiver.FileProgressReceiver
 import kashyap.`in`.cameraapplication.receiver.RetryJobReceiver
+import kashyap.`in`.cameraapplication.singleton.ApiService
+import kashyap.`in`.cameraapplication.singleton.RetrofitInstance
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody

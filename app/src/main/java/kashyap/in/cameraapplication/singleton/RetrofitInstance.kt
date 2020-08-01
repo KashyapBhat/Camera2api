@@ -1,10 +1,11 @@
-package kashyap.`in`.cameraapplication.network
+package kashyap.`in`.cameraapplication.singleton
 
 import kashyap.`in`.cameraapplication.BuildConfig
 import kashyap.`in`.cameraapplication.common.BASE_URL
 import kashyap.`in`.cameraapplication.common.CONNECT_TIMEOUT
 import kashyap.`in`.cameraapplication.common.READ_TIMEOUT
 import kashyap.`in`.cameraapplication.common.WRITE_TIMEOUT
+import kashyap.`in`.cameraapplication.network.HeaderInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -24,7 +25,8 @@ object RetrofitInstance {
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build()
             }
-            return retrofit!!.create(ApiService::class.java)
+            return retrofit!!.create(
+                ApiService::class.java)
         }
 
     private fun provideHttpClient(): OkHttpClient {
