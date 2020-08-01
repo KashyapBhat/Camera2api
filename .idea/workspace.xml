@@ -11,25 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acd7d40a-b384-426e-aa5d-109276ca5e55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_5_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_logging_interceptor_4_7_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_4_7_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_2_6_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_adapter_rxjava2_2_6_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_9_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_9_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava3_rxandroid_3_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava3_rxjava_3_0_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_reactivestreams_reactive_streams_1_0_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/network/ApiService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/network/CountingRequestBody.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/network/FileUploadService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/network/HeaderInterceptor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/network/RetrofitInstance.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/notification/NotificationHelper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/receiver/FileProgressReceiver.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/receiver/RetryJobReceiver.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/file_provider_paths.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -40,19 +21,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_reactivestreams_reactive_streams_1_0_2_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/common/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/common/Constants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/network/FileUploadService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/network/FileUploadService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/util/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/util/Utils.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +83,7 @@
       <recent name="kashyap.in.cameraapplication" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="kashyap.in.cameraapplication.singleton" />
       <recent name="kashyap.in.cameraapplication.receiver" />
       <recent name="kashyap.in.cameraapplication.notification" />
       <recent name="kashyap.in.cameraapplication.util" />
@@ -205,10 +179,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1596221577606" />
-    <state x="483" y="109" width="529" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1596266964677">
+    <state x="483" y="109" width="529" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1596271961524">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="483" y="109" width="529" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1596266964677" />
+    <state x="483" y="109" width="529" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1596271961524" />
     <state x="308" y="212" key="AndroidCreateResourceFileDialog" timestamp="1596205296735">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -225,22 +199,22 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="471" height="466" key="DebuggerActiveHint/0.0.1440.900@0.0.1440.900" timestamp="1596268123646" />
-    <state width="1398" height="461" key="GridCell.Tab.0.bottom" timestamp="1596269146362">
+    <state width="1398" height="461" key="GridCell.Tab.0.bottom" timestamp="1596272762315">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="461" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1596269146362" />
-    <state width="1398" height="461" key="GridCell.Tab.0.center" timestamp="1596269146360">
+    <state width="1398" height="461" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1596272762315" />
+    <state width="1398" height="461" key="GridCell.Tab.0.center" timestamp="1596272762313">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="461" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1596269146360" />
-    <state width="1398" height="461" key="GridCell.Tab.0.left" timestamp="1596269146360">
+    <state width="1398" height="461" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1596272762313" />
+    <state width="1398" height="461" key="GridCell.Tab.0.left" timestamp="1596272762312">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="461" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1596269146360" />
-    <state width="1398" height="461" key="GridCell.Tab.0.right" timestamp="1596269146361">
+    <state width="1398" height="461" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1596272762312" />
+    <state width="1398" height="461" key="GridCell.Tab.0.right" timestamp="1596272762314">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="461" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1596269146361" />
+    <state width="1398" height="461" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1596272762314" />
     <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1596268307355">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -269,35 +243,35 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="378" y="72" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900@0.0.1440.900" timestamp="1596265111589" />
-    <state x="372" y="207" width="695" height="486" key="find.popup" timestamp="1596268095413">
+    <state x="372" y="207" width="852" height="486" key="find.popup" timestamp="1596272766847">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="372" y="207" width="695" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1596268095413" />
+    <state x="372" y="207" width="852" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1596272766847" />
     <state x="385" y="210" key="run.anything.popup" timestamp="1596103525499">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1596103525499" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1596268436887">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1596272692157">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1596268436887" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1596272692157" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/network/FileUploadService.kt</url>
-          <line>82</line>
+          <line>85</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/network/FileUploadService.kt</url>
-          <line>85</line>
+          <line>88</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/kashyap/in/cameraapplication/network/FileUploadService.kt</url>
-          <line>67</line>
+          <line>70</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

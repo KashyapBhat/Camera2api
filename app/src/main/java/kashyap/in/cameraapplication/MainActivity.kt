@@ -33,6 +33,7 @@ import kashyap.`in`.cameraapplication.common.CAMERA_FRONT
 import kashyap.`in`.cameraapplication.common.CAMERA_ID
 import kashyap.`in`.cameraapplication.network.FileUploadService
 import kashyap.`in`.cameraapplication.singleton.SharedPrefUtils
+import kashyap.`in`.cameraapplication.util.isNetworkOnline
 import kashyap.`in`.cameraapplication.util.saveImageFile
 import java.io.File
 import java.util.*
@@ -217,7 +218,15 @@ open class MainActivity : AppCompatActivity() {
                     }
                     val mIntent = Intent(this, FileUploadService::class.java)
                     mIntent.putExtra("mFilePath", file.absolutePath)
-                    FileUploadService.enqueueWork(this, mIntent)
+                    if (isNetworkOnline(this))
+                        FileUploadService.enqueueWork(this, mIntent)
+                    else runOnUiThread {
+                        Toast.makeText(
+                            this,
+                            "Please connect to Internet.",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
                 }
             }
             reader.setOnImageAvailableListener(readerListener, mBackgroundHandler)
