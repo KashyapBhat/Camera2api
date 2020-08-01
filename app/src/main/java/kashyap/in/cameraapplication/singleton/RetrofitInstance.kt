@@ -36,9 +36,6 @@ object RetrofitInstance {
                 level =
                     if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE
             })
-            .connectTimeout(CONNECT_TIMEOUT, TimeUnit.SECONDS)
-            .writeTimeout(WRITE_TIMEOUT, TimeUnit.SECONDS)
-            .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
             .build()
     }
 }

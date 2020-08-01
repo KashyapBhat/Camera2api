@@ -15,9 +15,9 @@ enum class ErrorCodes(val code: Int, val message: String) {
 const val AUTH_KEY = "access-token"
 const val FORMAT = "_format"
 
-const val CONNECT_TIMEOUT: Long = 60 * 1000
-const val READ_TIMEOUT: Long = 60 * 1000
-const val WRITE_TIMEOUT: Long = 60 * 1000
+const val CONNECT_TIMEOUT: Long = 60
+const val READ_TIMEOUT: Long = 60
+const val WRITE_TIMEOUT: Long = 60
 
 
 const val BASE_URL = "https://srv-file6.gofile.io/"
